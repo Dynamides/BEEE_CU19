@@ -1,7 +1,7 @@
 void setup() 
 {
   Serial.begin(9600);
-  pinMode(9,OUTPUT); 
+  pinMode(13,OUTPUT); 
 
 }
 
@@ -12,11 +12,11 @@ void loop()
       int data = Serial.read();
       if(data=='1')
       {
-          digitalWrite(9,HIGH);
+          digitalWrite(13,HIGH);
       }
       if(data=='2')
       {
-          digitalWrite(9,LOW);
+          digitalWrite(13,LOW);
       }
           
       delay(50);  
