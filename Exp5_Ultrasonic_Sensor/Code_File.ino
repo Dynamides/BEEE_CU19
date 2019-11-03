@@ -1,20 +1,22 @@
+long duration;
+int distance;
 void setup()
 {
   Serial.begin(9600);
-  pinMode(trigPin,OUTPUT);
+  pinMode(10,OUTPUT);
   pinMode(echoPin,INPUT);
 }
  
 void loop()
 {
-  digitalWrite(trigPin,LOW);
+  digitalWrite(10,LOW);
   delayMicroseconds(2);
   
-  digitalWrite(trigPin,HIGH);
+  digitalWrite(10,HIGH);
   delayMicroseconds(10);
   
-  digitalWrite(trigPin,LOW);
-  duration = pulseIn(echoPin,HIGH);
+  digitalWrite(10,LOW);
+  duration = pulseIn(9,HIGH);
   
   distance = duration/58.2;
   
